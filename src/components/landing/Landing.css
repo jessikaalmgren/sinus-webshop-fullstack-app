@@ -1,0 +1,26 @@
+.wrapper-landing {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.content1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  padding: 1em;
+  grid-gap: 4em;
+  background-color: white;
+  text-align: center;
+  border-style: solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.hoodieimg img {
+  width: 23em;
+  height: 27em;
+  overflow: hidden;
+}

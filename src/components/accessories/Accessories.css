@@ -1,0 +1,47 @@
+.wrapper-accessories {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.accessories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  padding: 1em;
+  grid-gap: 4em;
+  background-color: white;
+  text-align: center;
+  border-style: solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.accessoryimg img {
+  width: 16em;
+  height: 18em;
+  overflow: hidden;
+}
+
+.accessory-heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.accessory-price {
+  font-style: #484646;
+}
+
+.button-buy {
+  color: white;
+  background-color: black;
+  width: 12em;
+  height: 3em;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
+}

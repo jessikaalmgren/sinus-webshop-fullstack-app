@@ -1,0 +1,57 @@
+.wrapper-oneproduct {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.oneproduct {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  padding: 1em;
+  grid-gap: 4em;
+  background-color: white;
+  text-align: center;
+  border-style: solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.section1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.section2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.oneprodimg img {
+  width: 23em;
+  height: 27em;
+  overflow: hidden;
+}
+
+.shirt-heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.shirt-price {
+  font-style: #484646;
+}
+
+.button-buy {
+  color: white;
+  background-color: black;
+  width: 12em;
+  height: 3em;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
+}

@@ -1,0 +1,47 @@
+.wrapper-hoodies {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.hoodies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 4em;
+  padding: 1em;
+  background-color: white;
+  text-align: center;
+  border-style: solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.hoodieimg img {
+  width: 23em;
+  height: 27em;
+  overflow: hidden;
+}
+
+.hoodie-heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hoodie-price {
+  font-style: #484646;
+}
+
+.button-buy {
+  color: white;
+  background-color: black;
+  width: 12em;
+  height: 3em;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
+}
