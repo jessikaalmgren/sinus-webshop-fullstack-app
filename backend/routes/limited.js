@@ -1,14 +1,14 @@
 const getDataBase = require('../database.js')
 const db = getDataBase()
-
 const express = require('express')
 const router = express.Router()
+
 
 //REST API
 //GET PRODUCTS
 router.get('/', async (req, res) => {
-	const capsRef = db.collection('caps')
-	const snapshot = await capsRef.get()
+	const limitedRef = db.collection('limited')
+	const snapshot = await limitedRef.get()
 
 	if (snapshot.empty) {
 		res.send([])
@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
 //GET id
 router.get('/:id', async (req, res) => {
 	const id = req.params.id
-	const docRef = await db.collection('caps').doc(id).get()
+	const docRef = await db.collection('limited').doc(id).get()
 
 	if( !docRef.exists) {
 		res.status(404).send('This product does not exist.')
@@ -38,6 +38,7 @@ router.get('/:id', async (req, res) => {
 	const data = docRef.data()
 	res.send(data)
 })
+
 
 //POST product
 router.post('/', async (req, res) => {
@@ -62,7 +63,7 @@ router.put('/:id', async (req, res) => {
 		return
 	}
 
-	const docRef = db.collection('caps').doc(id)
+	const docRef = db.collection('limited').doc(id)
 	await docRef.set(object, {merge: true})
 	res.sendStatus(200)
 
@@ -78,16 +79,15 @@ function checkProduct(maybeProduct) {
 //DELETE product:id
 router.delete('/:id', async (req, res) => {
 	const id = req.params.id
-	const docRef = await db.collection('caps').doc(id).get()
+	const docRef = await db.collection('limited').doc(id).get()
 
 	if( !docRef.exists ) {
 		res.sendStatus(400)
 		return
 	}
 
-	await db.collection('caps').doc(id).delete()
+	await db.collection('limited').doc(id).delete()
 	res.sendStatus(200)
 })
-
 
 module.exports = router

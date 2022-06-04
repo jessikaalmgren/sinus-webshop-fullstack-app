@@ -8,6 +8,7 @@ const shirts = require('./routes/shirts.js')
 const skateboards = require('./routes/skateboards.js')
 const caps = require('./routes/caps.js')
 const accessories = require('./routes/accessories.js')
+const limited = require('./routes/limited.js')
 
 const PORT = process.env.PORT || 1226
 
@@ -40,6 +41,7 @@ app.use('/api/shirts', shirts)
 app.use('/api/skateboards', skateboards)
 app.use('/api/caps', caps)
 app.use('/api/accessories', accessories)
+app.use('/api/limited', limited)
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../build/index.html'))

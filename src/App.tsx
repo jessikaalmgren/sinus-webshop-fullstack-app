@@ -9,6 +9,7 @@ import Caps from './components/caps/Caps'
 import Accessories from './components/accessories/Accessories'
 import Footer from './components/footer/Footer'
 import OneProduct from './components/oneProduct/Oneproduct'
+import Limited from './components/limited/Limited'
 import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 import { BrowserRouter } from "react-router-dom";
 
@@ -32,15 +33,18 @@ function App() {
       </header>
 
 	  <main className="content">
+		
 	  	<Routes>
             <Route path="/hoodies/:id" element={<OneProduct />} />
             <Route path="/accessories" element={<Accessories />} />
+			<Route path="/limited" element={<Limited />} />
             <Route path="/caps" element={<Caps />} />
             <Route path="/skateboards" element={<Skateboards />} />
             <Route path="/shirts" element={<Shirts />} />
             <Route path="/hoodies" element={<Hoodies />} />
             <Route path="/" element={<Landing />} />
         </Routes>
+		
 
 	  </main>
 	  <section className="footer">
